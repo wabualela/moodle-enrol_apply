@@ -23,90 +23,90 @@
  */
 
 // The name of your plug-in. Displayed on admin menus.
-$string['enrolname'] = 'Course enrol confirmation';
-$string['pluginname'] = 'Course enrol confirmation';
+$string['enrolname']       = 'Course enrol confirmation';
+$string['pluginname']      = 'Course enrol confirmation';
 $string['pluginname_desc'] = 'With this plug-in users can apply to be enrolled in a course. A teacher or site manager will then have to approve the enrolment before the user gets enroled.';
 
-$string['confirmmail_heading'] = 'Confirmation email';
-$string['confirmmail_desc'] = '';
-$string['confirmmailsubject'] = 'Confirmation email subject';
+$string['confirmmail_heading']     = 'Confirmation email';
+$string['confirmmail_desc']        = '';
+$string['confirmmailsubject']      = 'Confirmation email subject';
 $string['confirmmailsubject_desc'] = '';
-$string['confirmmailcontent'] = 'Confirmation email content';
+$string['confirmmailcontent']      = 'Confirmation email content';
 $string['confirmmailcontent_desc'] = 'Please use the following special marks to replace email content with data from Moodle.<br/>{firstname}:The first name of the user; {content}:The course name;{lastname}:The last name of the user;{username}:The users registration username;{timeend}: The enrolment expiration date';
 
-$string['waitmail_heading'] = 'Waiting list email';
-$string['waitmail_desc'] = '';
-$string['waitmailsubject'] = 'Waiting list mail subject';
+$string['waitmail_heading']     = 'Waiting list email';
+$string['waitmail_desc']        = '';
+$string['waitmailsubject']      = 'Waiting list mail subject';
 $string['waitmailsubject_desc'] = '';
-$string['waitmailcontent'] = 'Waiting list mail content';
+$string['waitmailcontent']      = 'Waiting list mail content';
 $string['waitmailcontent_desc'] = 'Please use the following special marks to replace email content with data from Moodle.<br/>{firstname}:The first name of the user; {content}:The course name;{lastname}:The last name of the user;{username}:The users registration username';
 
-$string['cancelmail_heading'] = 'Cancelation email';
-$string['cancelmail_desc'] = '';
-$string['cancelmailsubject'] = 'Cancelation email subject';
+$string['cancelmail_heading']     = 'Cancelation email';
+$string['cancelmail_desc']        = '';
+$string['cancelmailsubject']      = 'Cancelation email subject';
 $string['cancelmailsubject_desc'] = '';
-$string['cancelmailcontent'] = 'Cancelation email content';
+$string['cancelmailcontent']      = 'Cancelation email content';
 $string['cancelmailcontent_desc'] = 'Please use the following special marks to replace email content with data from Moodle.<br/>{firstname}:The first name of the user; {content}:The course name;{lastname}:The last name of the user;{username}:The users registration username';
 
-$string['notify_heading'] = 'Notification settings';
-$string['notify_desc'] = 'Define who gets notified about new enrolment applications.';
-$string['notifycoursebased'] = "New enrolment application notification (instance based, eg. course teachers)";
+$string['notify_heading']         = 'Notification settings';
+$string['notify_desc']            = 'Define who gets notified about new enrolment applications.';
+$string['notifycoursebased']      = "New enrolment application notification (instance based, eg. course teachers)";
 $string['notifycoursebased_desc'] = "Default for new instances: Notify everyone who have the 'Manage apply enrolment' capability for the corresponding course (eg. teachers and managers)";
-$string['notifyglobal'] = "New enrolment application notification (global, eg. global managers and admins)";
-$string['notifyglobal_desc'] = "Define who gets notified about new enrolment applications for any course.";
+$string['notifyglobal']           = "New enrolment application notification (global, eg. global managers and admins)";
+$string['notifyglobal_desc']      = "Define who gets notified about new enrolment applications for any course.";
 
-$string['messageprovider:application'] = 'Course enrolment application notifications';
+$string['messageprovider:application']  = 'Course enrolment application notifications';
 $string['messageprovider:confirmation'] = 'Course enrolment application confirmation notifications';
-$string['messageprovider:cancelation'] = 'Course enrolment application cancelation notifications';
-$string['messageprovider:waitinglist'] = 'Course enrolment application defer notifications';
+$string['messageprovider:cancelation']  = 'Course enrolment application cancelation notifications';
+$string['messageprovider:waitinglist']  = 'Course enrolment application defer notifications';
 
-$string['newapplicationnotification'] = 'There is a new course enrolment application awaiting review.';
+$string['newapplicationnotification']       = 'There is a new course enrolment application awaiting review.';
 $string['applicationconfirmednotification'] = 'Your course enrolment application was confirmed.';
-$string['applicationcancelednotification'] = 'Your course enrolment application was canceled.';
-$string['applicationdeferrednotification'] = 'Your course enrolment application was deferred (you are currently on the waiting list).';
+$string['applicationcancelednotification']  = 'Your course enrolment application was canceled.';
+$string['applicationdeferrednotification']  = 'Your course enrolment application was deferred (you are currently on the waiting list).';
 
-$string['confirmusers'] = 'Enrol Confirm';
+$string['confirmusers']      = 'Enrol Confirm';
 $string['confirmusers_desc'] = 'Users in gray colored rows are on the waiting list.';
 
-$string['coursename'] = 'Course';
-$string['applyuser'] = 'First name / Surname';
+$string['coursename']    = 'Course';
+$string['applyuser']     = 'First name / Surname';
 $string['applyusermail'] = 'Email';
-$string['applydate'] = 'Enrol date';
-$string['btnconfirm'] = 'Confirm requests';
-$string['btnwait'] = 'Defer requests';
-$string['btncancel'] = 'Cancel requests';
-$string['enrolusers'] = 'Enrol users';
+$string['applydate']     = 'Enrol date';
+$string['btnconfirm']    = 'Confirm requests';
+$string['btnwait']       = 'Defer requests';
+$string['btncancel']     = 'Cancel requests';
+$string['enrolusers']    = 'Enrol users';
 
-$string['status'] = 'Allow Course enrol confirmation';
-$string['newenrols'] = 'Allow new course enrol request';
+$string['status']       = 'Allow Course enrol confirmation';
+$string['newenrols']    = 'Allow new course enrol request';
 $string['confirmenrol'] = 'Manage application';
 
-$string['apply:config'] = 'Configure apply enrol instances';
-$string['apply:manage'] = 'Manage user enrolments';
+$string['apply:config']             = 'Configure apply enrol instances';
+$string['apply:manage']             = 'Manage user enrolments';
 $string['apply:manageapplications'] = 'Manage apply enrolment';
-$string['apply:unenrol'] = 'Cancel users from the course';
-$string['apply:unenrolself'] = 'Cancel self from the course';
+$string['apply:unenrol']            = 'Cancel users from the course';
+$string['apply:unenrolself']        = 'Cancel self from the course';
 
 $string['notification'] = '<b>Enrolment application successfully sent</b>. <br/><br/>You will be informed by email when your enrolment has been confirmed.';
 
 $string['mailtoteacher_suject'] = 'New Enrolment request!';
-$string['editdescription'] = 'Textarea description';
-$string['comment'] = 'Comment';
-$string['applycomment'] = 'Comment';
-$string['applymanage'] = 'Manage enrolment applications';
+$string['editdescription']      = 'Textarea description';
+$string['comment']              = 'Comment';
+$string['applycomment']         = 'Comment';
+$string['applymanage']          = 'Manage enrolment applications';
 
-$string['status_desc'] = 'Allow course access of internally enrolled users.';
+$string['status_desc']  = 'Allow course access of internally enrolled users.';
 $string['user_profile'] = 'User Profile';
 
 $string['show_standard_user_profile'] = 'Show standard user profile fields on enrolment screen';
-$string['show_extra_user_profile'] = 'Show extra user profile fields on enrolment screen';
+$string['show_extra_user_profile']    = 'Show extra user profile fields on enrolment screen';
 
 //$string['custom_label'] = 'Custom label "{replace_title}"';
 $string['custom_label'] = 'Custom label';
 
-$string['maxenrolled'] = 'Max enrolled users';
-$string['maxenrolled_help'] = 'Specifies the maximum number of users that can self enrol. 0 means no limit.';
-$string['maxenrolledreached_left'] = 'Maximum number of users allowed';
+$string['maxenrolled']              = 'Max enrolled users';
+$string['maxenrolled_help']         = 'Specifies the maximum number of users that can self enrol. 0 means no limit.';
+$string['maxenrolledreached_left']  = 'Maximum number of users allowed';
 $string['maxenrolledreached_right'] = 'has already been reached.';
 
 $string['cantenrol'] = 'Enrolment is disabled or inactive';
@@ -114,38 +114,38 @@ $string['cantenrol'] = 'Enrolment is disabled or inactive';
 $string['maxenrolled_tip_1'] = 'out of';
 $string['maxenrolled_tip_2'] = 'seats already booked.';
 
-$string['defaultperiod'] = 'Default enrolment duration';
+$string['defaultperiod']      = 'Default enrolment duration';
 $string['defaultperiod_desc'] = 'Default length of time that the enrolment is valid. If set to zero, the enrolment duration will be unlimited by default.';
 $string['defaultperiod_help'] = 'Default length of time that the enrolment is valid, starting with the moment the user is enrolled. If disabled, the enrolment duration will be unlimited by default.';
-$string['expiry_heading'] = 'Expiry settings';
-$string['expiry_desc'] = '';
-$string['expiredaction'] = 'Enrolment expiry action';
+$string['expiry_heading']     = 'Expiry settings';
+$string['expiry_desc']        = '';
+$string['expiredaction']      = 'Enrolment expiry action';
 $string['expiredaction_help'] = 'Select action to carry out when user enrolment expires. Please note that some user data and settings are purged from course during course unenrolment.';
 
-$string['submitted_info'] = 'Enrol info';
+$string['submitted_info']   = 'Enrol info';
 $string['privacy:metadata'] = 'The Course enrol confirmation plugin does not store any personal data.';
 
-$string['enrolperiod'] = 'Enrolment duration';
+$string['enrolperiod']      = 'Enrolment duration';
 $string['enrolperiod_desc'] = 'Default length of time that the enrolment is valid. If set to zero, the enrolment duration will be unlimited by default.';
 $string['enrolperiod_help'] = 'Length of time that the enrolment is valid, starting with the moment the user enrols themselves. If disabled, the enrolment duration will be unlimited.';
 
-$string['expirynotifyall'] = 'Teacher and enrolled user';
+$string['expirynotifyall']      = 'Teacher and enrolled user';
 $string['expirynotifyenroller'] = 'Teacher only';
 
-$string['group'] = 'Group assignement';
+$string['group']      = 'Group assignement';
 $string['group_help'] = 'You can assign none or multiples groups';
 
-$string['opt_commentaryzone'] = 'Commentary field';
+$string['opt_commentaryzone']      = 'Commentary field';
 $string['opt_commentaryzone_help'] = 'Yes -> Enable the commentary field in the enrol form';
 
 $string['expirymessageenrollersubject'] = 'Apply enrolment expiry notification';
-$string['expirymessageenrollerbody'] = 'Apply enrolment in the course \'{$a->course}\' will expire within the next {$a->threshold} for the following users:
+$string['expirymessageenrollerbody']    = 'Apply enrolment in the course \'{$a->course}\' will expire within the next {$a->threshold} for the following users:
 
     {$a->users}
 
 To extend their enrolment, go to {$a->extendurl}';
 $string['expirymessageenrolledsubject'] = 'Apply enrolment expiry notification';
-$string['expirymessageenrolledbody'] = 'Dear {$a->user},
+$string['expirymessageenrolledbody']    = 'Dear {$a->user},
 
 This is a notification that your enrolment in the course \'{$a->course}\' is due to expire on {$a->timeend}.
 
@@ -157,3 +157,6 @@ $string['messageprovider:expiry_notification'] = 'Apply enrolment expiry notific
 
 $string["profileoption"] = "Profile Field to Show in Table";
 
+$string['enrolmentconfirmed'] = 'Enrolment confirmed';
+$string['enrolmentwaited']    = 'Enrolment deferred';
+$string['enrolmentcanceled']  = 'Enrolment canceled';

@@ -30,12 +30,12 @@ class enrol_apply_manage_table extends table_sql {
 
     public $is_collapsible = false;
 
-    public function __construct($enrolid = null,$iduserenrol = null,$usersadm = null) {
+    public function __construct($enrolid = null, $iduserenrol = null, $usersadm = null) {
         parent::__construct('enrol_apply_manage_table');
 
         global $DB;
 
-        $sqlwhere = 'ue.status != 0';
+        $sqlwhere  = 'ue.status != 0';
         $sqlparams = array();
         if ($enrolid != null) {
             $sqlwhere .= " AND e.id = :enrolid";
@@ -45,16 +45,16 @@ class enrol_apply_manage_table extends table_sql {
             $sqlparams['enrol'] = 'apply';
         }
 
-        if($iduserenrol){
+        if ($iduserenrol) {
             $sqlwhere .= " AND ue.id = :userenrol";
             $sqlparams['userenrol'] = $iduserenrol;
         }
 
-        if($usersadm){
-            $sqlwhere .= " AND ue.userid in (".implode(",",$usersadm).")";
+        if ($usersadm) {
+            $sqlwhere .= " AND ue.userid in (" . implode(",", $usersadm) . ")";
         }
         $extra = get_config('enrol_apply', 'profileoption');
-        if($extra) {
+        if ($extra) {
             $this->set_sql(
                 "ue.id AS userenrolmentid, ue.userid, ue.status AS enrolstatus, ue.timecreated AS applydate,
             ai.comment AS applycomment, u.*, c.fullname as course, c.id as courseid,uid.data as field",
@@ -66,8 +66,7 @@ class enrol_apply_manage_table extends table_sql {
             LEFT OUTER JOIN {user_info_data} uid on uid.userid=u.id and uid.fieldid={$extra}",
                 $sqlwhere,
                 $sqlparams);
-        }
-        else{
+        } else {
             $this->set_sql(
                 "ue.id AS userenrolmentid, ue.userid, ue.status AS enrolstatus, ue.timecreated AS applydate,
             ai.comment AS applycomment, u.*, c.fullname as course, c.id as courseid",
@@ -116,4 +115,41 @@ class enrol_apply_manage_table extends table_sql {
     public function col_applydate($row) {
         return date("Y-m-d", $row->applydate);
     }
+
+    public function col_options($row) {
+        global $OUTPUT;
+        $options = [];
+        $options[] = $OUTPUT->action_icon(
+            new moodle_url('/enrol/apply/manage.php', array('userenrolment' => $row->userenrolmentid, 'formaction' => 'confirm')),
+            new pix_icon('t/approve', get_string('btnconfirm', 'enrol_apply')),
+            null,
+            array('title' => get_string('btnconfirm', 'enrol_apply'), 'data-action' => 'post')
+        );
+        $options[] = $OUTPUT->action_icon(
+            new moodle_url('/enrol/apply/manage.php', array('userenrolment' => $row->userenrolmentid, 'formaction' => 'wait')),
+            new pix_icon('t/lock', get_string('btnwait', 'enrol_apply')),
+            null,
+            array('title' => get_string('btnwait', 'enrol_apply'), 'data-action' => 'post')
+        );
+        $options[] = $OUTPUT->action_icon(
+            new moodle_url('/enrol/apply/manage.php', array('userenrolment' => $row->userenrolmentid, 'formaction' => 'cancel')),
+            new pix_icon('t/block', get_string('btncancel', 'enrol_apply')),
+            null,
+            array('title' => get_string('btncancel', 'enrol_apply'), 'data-action' => 'post')
+        );
+
+        return implode(' ', $options);
+    }
+
+    public function col_courses($row) {
+        global $DB, $OUTPUT, $CFG;
+        $courses = enrol_get_users_courses($row->userid, true, 'id, fullname');
+        $tags = array_map(function($course) use ($CFG) {
+            return html_writer::tag('span', "<a href='{$CFG->wwwroot}/course/view.php?id={$course->id}'>{$course->fullname}</a>", array('class' => 'tag'));
+        }, $courses);
+
+        return implode(' ', $tags);
+    }
+
+
 }
