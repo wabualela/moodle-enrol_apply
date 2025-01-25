@@ -89,7 +89,6 @@ class enrol_apply_renderer extends plugin_renderer_base {
                 'courses',
                 'applydate',
                 'field',
-                'applycomment',
                 'options');
 
             $headers = array(
@@ -100,7 +99,6 @@ class enrol_apply_renderer extends plugin_renderer_base {
                 get_string('courses'),
                 get_string('applydate', 'enrol_apply'),
                 $field->name,
-                get_string('applycomment', 'enrol_apply'),
                 get_string('options'),
             );
         }
@@ -111,7 +109,6 @@ class enrol_apply_renderer extends plugin_renderer_base {
                 'email',
                 'courses',
                 'applydate',
-                'applycomment',
                 'options');
 
             $headers = array(
@@ -121,7 +118,6 @@ class enrol_apply_renderer extends plugin_renderer_base {
                 get_string('email'),
                 get_string('courses'),
                 get_string('applydate', 'enrol_apply'),
-                get_string('applycomment', 'enrol_apply'),
                 get_string('options'),
             );
         }
