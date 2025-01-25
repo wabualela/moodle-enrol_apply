@@ -65,7 +65,7 @@ $string['applicationconfirmednotification'] = 'تم تأكيد طلب تسجيل
 $string['applicationcancelednotification']  = 'تم إلغاء طلب تسجيلك في الدورة.';
 $string['applicationdeferrednotification']  = 'تم تأجيل طلب تسجيلك في الدورة (أنت حاليًا في قائمة الانتظار).';
 
-$string['confirmusers']      = 'تأكيد التسجيل';
+$string['confirmusers']      = 'تأكيد طلبات الالتحاق';
 $string['confirmusers_desc'] = 'المستخدمون في الصفوف ذات اللون الرمادي هم في قائمة الانتظار.';
 
 $string['coursename']    = 'الدورة';
